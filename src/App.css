@@ -56,6 +56,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 1rem;s
   width: 100%;
 }
 
@@ -84,9 +85,9 @@
   border-color: gainsboro;
   border-width: 4px;
   padding: 2rem;
+  gap: 1rem;
   flex: 1;
   border-style: solid;
-  justify-content: space-evenly;
  }
 
 

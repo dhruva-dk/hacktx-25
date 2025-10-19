@@ -6,7 +6,7 @@ import IncomeInput from "./components/IncomeInput";
 function App() {
 
   const [monthlyIncome, setMonthlyIncome] = useState(1000);
-  const [split, setSplit] = useState([100]);
+  const [split, setSplit] = useState([50, 30, 20]);
 
 
   // When submitting income form, update state 
@@ -41,6 +41,7 @@ function App() {
 
           <div className="card">
             <h1>Budget Plans</h1>
+            <h2>Needs/Wants/Savings</h2>
             <div>
               <div className="split-buttons">
                 <button onClick={() => setSplit([50, 30, 20])}>50 / 30 / 20</button>
