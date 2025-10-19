@@ -1,28 +1,108 @@
+/* Overall App Layout */
+
 #root {
   width: 100%;
 }
 
 .app-container {
   text-align: center;
-  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
 }
 
 .budgeting-container {
   display: flex;
   flex-grow: 1;
-  gap: 2rem;
+  padding: 3rem;
+  gap: 3rem;
 }
 
-.income-container, .expenses-container {
-  padding: 1rem;
-  flex: 1
+
+/* Header container */
+.header-container {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
 }
 
-.income-container {
-  background-color: #f0f0f0;
+/* Stack vertically on smaller screens */
+
+@media (max-width: 1280px) {
+    .budgeting-container {
+      flex-direction: column;
+    }
+
+    .split-buttons {
+      flex-direction: column;
+    }
 }
 
-.expenses-container {
-  background-color: #ffffff;
+
+/* Style for monthly expense bar section */
+
+.income-bar-container {
+    border-radius: 3rem;
+    height: 100%;
+    display: flex;
+    flex: 1;
+    flex-direction: column-reverse;
+    overflow: hidden;
 }
 
+.expense-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+
+/* Style for input sections (income and expenses) */
+
+#galaxy-img {
+  width: 20%
+ }
+
+/* style Galaxy Image*/
+
+.input-container {
+  flex: 1;
+  flex-direction: column;
+  display: flex;
+  gap: 3rem;
+  text-align: left;
+}
+ 
+
+ .card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 3rem;
+  border-color: gainsboro;
+  border-width: 4px;
+  padding: 2rem;
+  flex: 1;
+  border-style: solid;
+  justify-content: space-evenly;
+ }
+
+
+
+.split-buttons {
+  display: flex;       /* horizontal row */
+  gap: 10px;           /* space between buttons */
+  justify-content: flex-start; /* align buttons to the left */
+}
+
+
+
+.split-buttons button {
+  flex: none;       /* don’t stretch in flex containers */
+  width: auto;      /* fit the text */
+  height: auto;     /* fit the text vertically */
+  padding: 6px 12px; /* adjust for nicer sizing */
+  align-self: start; /* optional: align to top of container if using flex */
+}
